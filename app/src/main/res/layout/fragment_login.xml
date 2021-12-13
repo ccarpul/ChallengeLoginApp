@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_l">
+
+    <TextView
+        android:id="@+id/disclaimer"
+        style="@style/Theme.Disclaimer.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_l"
+        android:text="@string/text_login_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/phoneNumberLoginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_l"
+        android:hint="@string/textview_phone_number_hint"
+        app:prefixText="@string/phone_number_prefix"
+        app:layout_constraintTop_toBottomOf="@+id/disclaimer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNumberLoginEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="10"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonPhoneNumberLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_login_phone_number"
+        android:backgroundTint="@color/com_facebook_blue"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberLoginLayout" />
+
+    <TextView
+        style="@style/Theme.Disclaimer.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/margin_l"
+        android:text="@string/text_decorative_or"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFacebook" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/buttonFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPhoneNumberLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

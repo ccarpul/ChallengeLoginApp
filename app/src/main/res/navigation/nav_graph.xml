@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.intercorp.android.challenge.presentation.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_formDataUserFragment"
+            app:destination="@id/formDataUserFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_validateLoginSmsFragment"
+            app:destination="@id/validateLoginSmsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_errorFragment"
+            app:destination="@id/errorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formDataUserFragment"
+        android:name="com.intercorp.android.challenge.presentation.FormDataUserFragment"
+        android:label="Register user"
+        tools:layout="@layout/fragment_form_data_user">
+        <action
+            android:id="@+id/action_formDataUserFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:popUpTo="@id/formDataUserFragment"
+            app:popUpToInclusive="true"
+             />
+        <action
+            android:id="@+id/action_formDataUserFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:popUpTo="@id/formDataUserFragment"
+            app:popUpToInclusive="true"
+             />
+    </fragment>
+    <fragment
+        android:id="@+id/validateLoginSmsFragment"
+        android:name="com.intercorp.android.challenge.presentation.ValidateLoginSmsFragment"
+        android:label="Validate code SMS"
+        tools:layout="@layout/fragment_validate_login_sms">
+        <action
+            android:id="@+id/action_validateLoginSmsFragment_to_formDataUserFragment"
+            app:destination="@id/formDataUserFragment"
+            app:popUpTo="@id/validateLoginSmsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_validateLoginSmsFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.intercorp.android.challenge.presentation.ErrorFragment"
+        tools:layout="@layout/fragment_error"/>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.intercorp.android.challenge.presentation.SuccessFragment"
+        tools:layout="@layout/fragment_success" />
+</navigation>

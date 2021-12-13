@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Login Intercorp</string>
+
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
+    <string name="facebook_app_id">683722412608614</string>
+    <string name="fb_login_protocol_scheme">fb683722412608614</string>
+    <string name="title_user_created">User has been created</string>
+    <string name="button_text_crete_user">Create</string>
+    <string name="text_login_title">Login with phone number</string>
+    <string name="button_login_phone_number">Sign up</string>
+    <string name="text_decorative_or">- or -</string>
+    <string name="textview_phone_number_hint">Phone number</string>
+    <string name="textview_name_hint">Name</string>
+    <string name="textview_lastname_hint">Lastname</string>
+    <string name="textview_age_hint">Age</string>
+    <string name="textview_birthday_hint">Birthday</string>
+    <string name="button_verify_sms">Verify</string>
+    <string name="disclaimer_error_message_login">An error occurred while trying login the user</string>
+    <string name="disclaimer_field_code_sms_empty">Please should be write de code</string>
+    <string name="code_sms_hint">Code SMS</string>
+    <string name="phone_number_prefix">+54</string>
+
+
+</resources>
